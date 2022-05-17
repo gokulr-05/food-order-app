@@ -1,0 +1,7 @@
+.order-btn,
+.close-btn {
+  background-color: #a64b2a;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 15px;
+}

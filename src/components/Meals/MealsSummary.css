@@ -1,0 +1,47 @@
+.MealsSummary {
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  top: -12rem;
+  /* left: ; */
+  color: white;
+  background-color: #a64b2a;
+  padding: 25px;
+  border-radius: 15px;
+  /* transform: translateY(-50%); */
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+}
+
+/* #################################################### MEDIA QUERY ################################ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .MealsSummary {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: -12rem;
+    /* left: ; */
+    color: white;
+    background-color: #a64b2a;
+    padding: 25px;
+    border-radius: 15px;
+    /* transform: translateY(-50%); */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+  }
+}
+
+@media (max-width: 767px) {
+  .MealsSummary {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -12rem;
+    /* left: ; */
+    color: white;
+    background-color: #a64b2a;
+    padding: 25px;
+    border-radius: 15px;
+    /* transform: translateY(-50%); */
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+  }
+}

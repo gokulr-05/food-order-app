@@ -1,0 +1,40 @@
+.meal-item-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.meal-item-des {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.meal-item-cost {
+  color: #a64b2a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.amt-txt {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.amt-inp {
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: 500;
+  /* display: flex;
+  align-items: center;
+  justify-items: center; */
+  text-align: center;
+  background-color: #ffbe7c;
+}
+
+.amt-btn {
+  background-color: #a64b2a;
+  color: white;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-weight: 600;
+}

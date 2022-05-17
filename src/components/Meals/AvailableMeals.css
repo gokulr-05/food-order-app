@@ -1,0 +1,35 @@
+.availableMeals {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  /* color: white; */
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+}
+
+/* #################################################### MEDIA QUERY ################################ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .availableMeals {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    /* color: white; */
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+  }
+}
+
+@media (max-width: 767px) {
+  .availableMeals {
+    width: 95%;
+    margin: 0 auto;
+    background-color: white;
+    /* color: white; */
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.468);
+  }
+}
