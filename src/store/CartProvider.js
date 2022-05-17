@@ -45,6 +45,29 @@ let reducer = (state, action) => {
 
       return { items: arr, totalAmount: totamt };
     }
+  } else if (action.type === "DeleteItem") {
+    let totamt = state.totalAmount - action.item.amount * action.item.price;
+
+    let deleteId = action.item.id;
+    console.log("deleteId=", deleteId);
+
+    let arr1 = [...state.items];
+
+    let indexx = arr1.findIndex((item) => {
+      return item.id === deleteId;
+    });
+
+    let data = arr1[indexx];
+
+    let updatedData = { ...data, amount: data.amount - 1 };
+
+    if (updatedData.amount <= 0) {
+      arr1.splice(indexx, 1);
+    } else {
+      arr1[indexx] = updatedData;
+    }
+
+    return { items: arr1, totalAmount: totamt };
   }
 };
 
@@ -58,8 +81,8 @@ let CartProvider = (props) => {
     dispatchFunc({ type: "AddItem", item: item });
   };
 
-  let deleteItemHandler = (id) => {
-    dispatchFunc({ type: "DeleteItem", id: id });
+  let deleteItemHandler = (item) => {
+    dispatchFunc({ type: "DeleteItem", item: item });
   };
 
   let cartcontext = {

@@ -7,6 +7,21 @@ let Cart = () => {
   let data = [...cartctx.items];
   let data1 = [{ id: "1", name: "pravin", amount: "55.25" }];
 
+  let PlusHandler = ({ id, name, price, amount }) => {
+    cartctx.addItem({ id, name, price, amount: 1 });
+  };
+
+  let minusHandler = ({ id, name, price, OriginalAmount }) => {
+    console.log({ id, name, price });
+    cartctx.deleteItem({
+      id,
+      name,
+      price,
+      amount: 1,
+      OriginalAmount: OriginalAmount,
+    });
+  };
+
   return (
     <div>
       <div
@@ -34,8 +49,32 @@ let Cart = () => {
                       val.amount
                     }*${Number(val.price).toFixed(2)}`}</div>
                     <div className="d-flex align-items-center gap-2">
-                      <button className="text-uppercase op-btn">add</button>
-                      <button className="text-uppercase  op-btn">sub</button>
+                      <button
+                        className="text-uppercase op-btn"
+                        onClick={(e) => {
+                          PlusHandler({
+                            id: val.id,
+                            name: val.name,
+                            price: val.price,
+                            amount: val.amount,
+                          });
+                        }}
+                      >
+                        +
+                      </button>
+                      <button
+                        className="text-uppercase  op-btn"
+                        onClick={(e) => {
+                          minusHandler({
+                            id: val.id,
+                            name: val.name,
+                            price: val.price,
+                            OriginalAmount: val.amount,
+                          });
+                        }}
+                      >
+                        -
+                      </button>
                     </div>
                   </div>
                 );
