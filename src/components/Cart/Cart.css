@@ -5,3 +5,15 @@
   border-radius: 10px;
   padding: 5px 15px;
 }
+
+.op-btn {
+  border-radius: 10px;
+  background-color: #a64b2a;
+  color: white;
+  font-weight: 500;
+}
+
+.tot-amt {
+  font-size: 20px;
+  font-weight: 600;
+}

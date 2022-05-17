@@ -47,7 +47,7 @@ let AvailableMeals = () => {
     );
   });
 
-  console.log("arr=", arr);
+  // console.log("arr=", arr);
 
   return <div className="availableMeals">{arr}</div>;
 };

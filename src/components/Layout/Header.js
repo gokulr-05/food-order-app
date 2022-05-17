@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import "./Header.css";
 import mealsPic from "../../assets/ori.jpg";
+import cartContext from "../../store/cart-context";
 let Header = () => {
+  let cartctx = useContext(cartContext);
+  let numberOfCartItems = cartctx.items.reduce((tot, val) => {
+    return tot + Number(val.amount);
+  }, 0);
+
   return (
     <div className="mb-5">
       <header className="header-1 fixed-top  header-1 ">
@@ -14,7 +21,7 @@ let Header = () => {
             <span className="d-flex gap-2 align-items-center">
               <i className="fa-solid fa-cart-shopping"></i>
               <span>cart</span>
-              <span className="cart-count">0</span>
+              <span className="cart-count">{numberOfCartItems}</span>
             </span>
           </button>
         </div>
